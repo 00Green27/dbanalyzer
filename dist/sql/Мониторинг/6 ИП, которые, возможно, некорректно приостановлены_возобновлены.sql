@@ -1,0 +1,2 @@
+--!Список ИП, которые, возможно, некорректно приостановлены/возобновлены!--
+select ip.num_ip, ip.fio_spi, ip.date_ip_in,  ip_stop.date_start, ip_stop.date_end, s_users.primary_site from ip_stop LEFT join IP on (ip_stop.fk_ip = ip.pk) left join s_users on (ip.uscode = s_users.uscode)  where  ssd is null and ssv is null and ((ip_stop.date_start is null) or (ip_stop.date_start <'01.01.1900') or (ip_stop.date_end <'01.01.1900')) order by PRIMARY_SITE

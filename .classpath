@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/autocomplete.jar"/>
+	<classpathentry kind="lib" path="lib/jaybird-full-2.1.6.jar"/>
+	<classpathentry kind="lib" path="lib/jdom.jar"/>
+	<classpathentry kind="lib" path="lib/mydoggy-api-1.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/mydoggy-plaf-1.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/mydoggy-res-1.4.1.jar"/>
+	<classpathentry kind="lib" path="lib/rsyntaxtextarea.jar"/>
+	<classpathentry kind="lib" path="lib/TableLayout-20050920.jar"/>
+	<classpathentry kind="lib" path="lib/miglayout-3.7.3.1-swing.jar"/>
+	<classpathentry kind="lib" path="lib/poi-3.6-20091214.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="file:/media/data/Programming/lib/poi-3.6/docs/apidocs/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/ruswing.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,1 @@
+select npp, num_ip from ip where pk in (select p.pk from ip p inner join id d on p.pk_id = d.pk where p.npp <> d.npp) and ssv is null and ssd is null

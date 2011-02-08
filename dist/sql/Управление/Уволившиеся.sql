@@ -1,0 +1,2 @@
+--!Уволившиеся!--
+select s_users.username as Ф.И.О. from s_users where s_users.uscode not in (select distinct s_users.uscode from s_users join ip on s_users.uscode=ip.uscode where ip.date_ip_in>'01.04.2010' and ip.date_ip_out is null) and s_users.groups='P'

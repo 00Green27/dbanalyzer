@@ -1,0 +1,1 @@
+select distinct IP1.NUM_IP as NUMBER from IP IP1,IP IP2 where (IP1.NUM_IP=IP2.NUM_IP)and(IP1.PK<>IP2.PK)and(IP1.DATE_IP_OUT>="01.01.2010" or IP1.DATE_IP_OUT is null)and(IP2.DATE_IP_OUT>="01.01.2010" or IP2.DATE_IP_OUT is null)

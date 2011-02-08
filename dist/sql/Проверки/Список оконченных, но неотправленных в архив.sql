@@ -1,0 +1,2 @@
+--!Список оконченных, но неотправленных в архив!--
+select ip.num_ip, ip.fio_spi, ip.num_list_ip, ip.num_ip_in_list, ip.date_ip_arch from ip where ip.num_ip not containing '-С' and ip.date_ip_out is not null and ip.num_list_ip is null and ip.num_ip_in_list is null --and ip.date_ip_arch is null

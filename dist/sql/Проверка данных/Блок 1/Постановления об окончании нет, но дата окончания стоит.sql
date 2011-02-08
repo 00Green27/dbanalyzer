@@ -1,0 +1,1 @@
+select ip.num_ip from ip left outer join document on (ip.pk=document.fk and document.kod in (99,333,347)) where ip.ssd is null and ip.ssv is null and ip.date_ip_out is not null and document.pk is null

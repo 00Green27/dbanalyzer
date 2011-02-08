@@ -1,0 +1,1 @@
+select ip1.num_ip from ip ip1, ip ip2 where ip1.pk=ip2.pk_svod and ip1.ssv=1 and ip2.ssd is null and ip2.ssv is null and (ROUND((Select sum(iis.summ) from ip_in_sum iis where iis.fk=ip2.pk and iis.main_dolg=1 and iis.iserror is null and iis.returnflag=0),2)>ROUND(ip1.main_dolg,2))

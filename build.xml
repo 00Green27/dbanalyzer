@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<project name="DBAnalyzer" default="build">
+	<description>
+        This is an ant build.xml file for building DBAnalyzer.
+    </description>
+
+
+	<property name="name" value="DBAnalyzer" />
+	<property name="version" value="0.2.1" />
+	<property name="jar.filename" value="${name}" />
+	<property name="classes.dir" location="bin" />
+	<property name="build.dir" location="dist" />
+	<property name="lib.dir" location="${build.dir}/lib" />
+	<property name="src.dir" location="src" />
+	<property name="jar.location" location="${build.dir}" />
+	<property name="sql.location" location="${build.dir}/sql" />
+	<property name="backup.dir" location="../../Backup/${name}" />
+	<property name="main.class" value="ru.stavjust.DBAnalyzer" />
+
+	<tstamp>
+		<format property="TODAY" pattern="yyyyMMdd" />
+	</tstamp>
+
+	<tstamp>
+		<format property="built.date" pattern="dd.MM.yyyy" />
+	</tstamp>
+
+	<path id="build.classpath">
+		<fileset dir="${basedir}">
+			<include name="lib/*.jar" />
+		</fileset>
+	</path>
+
+	<pathconvert property="manifest.classpath" pathsep=" ">
+		<path refid="build.classpath" />
+		<mapper>
+			<chainedmapper>
+				<flattenmapper />
+				<globmapper from="*.jar" to="lib/*.jar" />
+			</chainedmapper>
+		</mapper>
+	</pathconvert>
+
+	<target name="build" depends="init, compile" description="build JAR-file">
+		<mkdir dir="${jar.location}" />
+		<mkdir dir="${sql.location}" />
+		<buildnumber file="build.num" />
+
+		<copy tofile="${jar.location}/${jar.filename}-${TODAY}.jar" file="${jar.location}/${jar.filename}.jar" failonerror="false" />
+
+		<jar destfile="${jar.location}/${jar.filename}.jar" basedir="${classes.dir}" compress="true" duplicate="fail">
+			<manifest>
+				<attribute name="Main-Class" value="${main.class}" />
+				<attribute name="Implementation-Version" value="${version}b-${build.number}" />
+				<attribute name="Built-Date" value="${built.date}" />
+				<attribute name="Class-Path" value="${manifest.classpath}" />
+				<attribute name="SplashScreen-Image" value="ru/stavjust/ui/resources/splash.png" />
+			</manifest>
+		</jar>
+		<copy todir="${lib.dir}">
+			<fileset dir="lib/" includes="**" />
+		</copy>
+	</target>
+
+	<target name="init" unless="init.done">
+		<property name="init.done" value="true" />
+	</target>
+
+	<target name="compile">
+
+	</target>
+
+	<target name="backup">
+		<mkdir dir="${backup.dir}" />
+		<zip destfile="${backup.dir}/${name}-${TODAY}.zip">
+			<zipfileset dir="." excludes="backup/**, dist/**, bin/**" />
+		</zip>
+	</target>
+</project>

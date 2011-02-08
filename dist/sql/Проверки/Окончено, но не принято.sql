@@ -1,0 +1,2 @@
+--!Окончено, но не принято!--
+select count(pk) from ip where ip.num_ip not containing '-С' and ip.date_ip_out is not null and ip.num_list_ip is not null and ip.num_ip_in_list is not null and ip.date_ip_arch is null

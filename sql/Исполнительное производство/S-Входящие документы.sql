@@ -1,0 +1,1 @@
+select count(*) as Количество from in_doc

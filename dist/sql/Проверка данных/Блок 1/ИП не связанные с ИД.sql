@@ -1,0 +1,1 @@
+select ip.num_ip from ip where ip.date_ip_out>"01.01.2010" and ip.ssd is null and ip.ssv is null and (select count(pk) from id where id.pk=ip.pk_id)=0

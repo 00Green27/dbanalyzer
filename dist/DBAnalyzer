@@ -1,0 +1,4 @@
+#!/bin/sh
+WORKDIR="/home/ehd/Программы/DBAnalyzer"
+cd $WORKDIR
+java -jar DBAnalyzer.jar

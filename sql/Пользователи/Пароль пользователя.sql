@@ -1,0 +1,1 @@
+select USERNAME as Пользователь, USPASSWORD AS Пароль from s_users s WHERE s.USERNAME='$user'
