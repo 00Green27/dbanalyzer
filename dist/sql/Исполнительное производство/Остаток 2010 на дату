@@ -1,1 +1,0 @@
-select (select count(pk) from ip where num_ip not CONTAINING 'Ñ' and DATE_IP_IN <"01.01.2010" and DATE_IP_OUT <"$date") - (select count(pk) from ip where num_ip not CONTAINING 'Ñ' and DATE_IP_IN <"01.01.2010" and DATE_IP_OUT >="$date") from ip where ip.npp=1

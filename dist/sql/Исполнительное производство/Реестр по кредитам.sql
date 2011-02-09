@@ -1,1 +1,0 @@
-SELECT NUM_IP AS 'Номер ИП', DATE_IP_IN AS 'Дата возбуждения ИП', SUM_ID AS 'Сумма взыскания по ИД', NAME_D AS 'Наименование должника', NAME_V AS 'Наименование взыскателя', MAIN_DOLG AS 'Сумма взысконного основного долга', SISP_KEY AS 'Сущность исполнения ' FROM IP WHERE DATE_IP_OUT is null and SUM_ >="1500000" and SISP_TTL containing"ИМУЩЕСТВЕННОГО ХАРАКТЕРА.КРЕДИТНЫЕ ПЛАТЕЖИ"

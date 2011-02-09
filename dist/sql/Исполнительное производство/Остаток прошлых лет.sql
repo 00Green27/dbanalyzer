@@ -1,1 +1,0 @@
-select count(pk) from ip where DATE_IP_IN <="31.12.2010" and DATE_IP_OUT >="01.01.2011" and DATE_IP_OUT <="26.01.2011" and SISP_TTL not containing"ÈÌÓÙÅÑÒÂÅÍÍÎÃÎ ÕÀÐÀÊÒÅÐÀ.ÀËÈÌÅÍÒÛ"

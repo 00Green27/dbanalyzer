@@ -1,1 +1,4 @@
-select USPASSWORD AS Пароль from s_users s WHERE s.USERNAME='АПП'
+/*
+@fieldName Пароль
+*/
+select USPASSWORD from s_users s WHERE s.USERNAME='АПП'
