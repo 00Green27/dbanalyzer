@@ -1,2 +1,0 @@
---!Список ИП, в которых должник - ЧП, но не указан его ИНН!--
-SELECT NUM_IP, INND, NAME_D, DATE_IP_IN, FIO_SPI, PRIMARY_SITE FROM IP left join s_users on (ip.uscode=s_users.uscode)  WHERE date_ip_out is null and ssd is null and ssv is null and (INND = '' or INND is null) AND VIDD_KEY = '/1/5/' order by PRIMARY_SITE

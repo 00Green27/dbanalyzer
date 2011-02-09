@@ -1,2 +1,0 @@
---!Окончено, но неотправлено в архив!--
-select count(pk) from ip where ip.num_ip not containing '-С' and ip.date_ip_out is not null and ip.num_list_ip is null and ip.num_ip_in_list is null --and ip.date_ip_arch is null

@@ -1,1 +1,0 @@
-select npp, num_ip from ip p where p.ssv = 1 and (select count(p1.pk) from ip p1 where p1.pk_svod = p.pk and p1.ssv is null and p1.ssd is null and p1.main_d = 1)<>1

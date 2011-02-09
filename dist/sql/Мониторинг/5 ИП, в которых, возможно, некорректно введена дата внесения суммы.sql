@@ -1,2 +1,0 @@
---!Список ИП, в которых, возможно, некорректно введена дата внесения суммы!--
-select ip.num_ip, ip.fio_spi, ip.date_ip_in,  ip_in_sum.date_sum, s_users.primary_site from ip_in_sum LEFT join IP on (ip_in_sum.fk = ip.pk) left join s_users on (ip.uscode = s_users.uscode)  where  ssd is null and ssv is null and date_sum <'01.01.1900' order by PRIMARY_SITE

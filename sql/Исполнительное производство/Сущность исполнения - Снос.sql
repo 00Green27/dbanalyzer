@@ -1,2 +1,0 @@
---!ямня яюлнбнкэмн бнгбедеммшу ярпнемхи!--
-select count(*) as 'йНКХВЕЯРБН' FROM IP WHERE SISP_TTL containing "мехлсыеярбеммнцн уюпюйрепю.ямня яюлнбнкэмн бнгбедеммшу ярпнемхи" and ip.date_ip_out is null
