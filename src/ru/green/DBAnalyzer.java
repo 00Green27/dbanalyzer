@@ -146,7 +146,7 @@ public class DBAnalyzer {
                     .getResourceAsStream("/ru/green/gui.props"));
             propMgr.loadSettingsProps(new FileInputStream(PREFERENCES));
         } catch (IOException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Что-то пошло не так.");
             System.exit(1);
         }
     }
@@ -154,8 +154,6 @@ public class DBAnalyzer {
 	public static void saveSettings() {
 		try {
 			propMgr.saveSettingsProps(new FileOutputStream(PREFERENCES));
-		} catch (FileNotFoundException e) {
-			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -217,7 +215,7 @@ public class DBAnalyzer {
 	 * @param value
 	 *            значение ключа
 	 */
-	public static final void setBooleanPreference(String name, boolean value) {
+	public static void setBooleanPreference(String name, boolean value) {
 		setPreference(name, value ? "true" : "false");
 	}
 }
