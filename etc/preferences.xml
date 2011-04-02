@@ -9,7 +9,7 @@
 <entry key="connection.password"/>
 <entry key="connection.protocol">jdbc:firebirdsql:</entry>
 <entry key="connection.list">etc/2010.lst</entry>
-<entry key="view.theme">false</entry>
+<entry key="view.theme">true</entry>
 <entry key="connection.driver-class">org.firebirdsql.jdbc.FBDriver</entry>
 <entry key="connection.parameters">lc_ctype=WIN1251;defaultResultSetHoldable=True</entry>
 </properties>

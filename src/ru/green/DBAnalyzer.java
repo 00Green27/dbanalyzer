@@ -57,9 +57,7 @@ public class DBAnalyzer {
 					} else
 						UIManager.setLookAndFeel(UIManager
 								.getSystemLookAndFeelClassName());
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				} catch (Exception ignored) {}
 				new MainFrame().setVisible(true);
 			}
 		});
@@ -73,7 +71,7 @@ public class DBAnalyzer {
 	 *
 	 * @return значение ключа
 	 */
-	public static final boolean getBooleanPreference(String name) {
+	public static boolean getBooleanPreference(String name) {
 		return getBooleanPreference(name, false);
 	}
 
