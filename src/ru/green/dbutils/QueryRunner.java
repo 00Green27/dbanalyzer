@@ -187,11 +187,11 @@ public class QueryRunner {
 	public void setColumnsName(ResultSet rs) throws SQLException {
 		ResultSetMetaData rsMetaData = rs.getMetaData();
 		int numberOfColumns = rsMetaData.getColumnCount();
-		String[] columns = new String[numberOfColumns];
+		String[] col = new String[numberOfColumns];
 		for (int i = 1; i <= numberOfColumns; i++) {
-			columns[i - 1] = rsMetaData.getColumnName(i);
+			col[i - 1] = rsMetaData.getColumnName(i);
 		}
-		this.columns = columns;
+		this.columns = col;
 	}
 
 	public String[] getColumnsName() {
@@ -205,7 +205,7 @@ public class QueryRunner {
 		if (causeMessage == null) {
 			causeMessage = "";
 		}
-		StringBuffer msg = new StringBuffer(causeMessage);
+		StringBuilder msg = new StringBuilder(causeMessage);
 
 		msg.append(" Query: ");
 		msg.append(sql);

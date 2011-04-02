@@ -38,7 +38,7 @@ import ru.green.utils.Utils;
  * 
  * @author ehd
  */
-public class DBUrlReader {
+public final class DBUrlReader {
 	ArrayList<Database> list = new ArrayList<Database>();
 
 	public DBUrlReader() {

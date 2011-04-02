@@ -198,7 +198,7 @@ public class Utils {
 		if (input == null) {
 			return null;
 		}
-		StringBuffer buffer = new StringBuffer( input.length() + 60 );
+		StringBuilder buffer = new StringBuilder( input.length() + 60 );
 		for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);
             if (c <= 0x7E) {
@@ -227,7 +227,7 @@ public class Utils {
 		if (input == null) {
 			return null;
 		}
-		StringBuffer buffer = new StringBuffer( input.length() );
+		StringBuilder buffer = new StringBuilder( input.length() );
 		boolean precedingBackslash = false;
 		for (int i = 0; i < input.length(); i++) {
             char c = input.charAt(i);

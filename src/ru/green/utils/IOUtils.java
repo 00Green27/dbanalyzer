@@ -57,7 +57,7 @@ public class IOUtils {
 
 
     public static String readFile(String srcFile) {
-        StringBuffer contents = new StringBuffer();
+        StringBuilder contents = new StringBuilder();
         try {
             BufferedReader reader = null;
             try{

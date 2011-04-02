@@ -193,9 +193,9 @@ public class ProgressDialog extends JDialog {
 			StringBuilder result = new StringBuilder("select ");
 			for (int i = 0; i < temp.length; i++)
 				if (i < temp.length - 1)
-					result.append(temp[i] + ", ");
+					result.append(temp[i]).append(", ");
 				else
-					result.append(temp[i] + " ");
+					result.append(temp[i]).append(" ");
 			result.append(sql.substring(indexFrom).replace("\"", "'"));
 			return result.toString();
 		}
@@ -299,10 +299,6 @@ public class ProgressDialog extends JDialog {
 			}
 			ProgressDialog.this.frame.setResult(split, all);
 			frame.displayMessage(DBAnalyzer.getProperty("msg.query-complite"));
-		}
-
-		@SuppressWarnings("unused")
-		private void setProgress(boolean b) {
 		}
 	}
 }

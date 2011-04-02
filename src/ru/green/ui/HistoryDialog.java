@@ -39,7 +39,7 @@ public class HistoryDialog extends JDialog {
     public static final String HISTORY_FILE = "etc/history";
 
     private MainFrame frame;
-    private Vector title= new Vector();
+    private List title= new ArrayList();
     private JButton insertButton;
     private JButton cancelButton;
     private JList list;
@@ -94,8 +94,8 @@ public class HistoryDialog extends JDialog {
 
     private String[] prepareHistrory(String string) {
         String[] data = string.split(System.getProperty("line.separator"));
-        List<String> list = Arrays.asList(data);
-        Set<String> set = new HashSet<String>(list);
+        List<String> l = Arrays.asList(data);
+        Set<String> set = new HashSet<String>(l);
         String[] result = new String[set.size()];
         set.toArray(result);
         if (result.length >= 20) {
