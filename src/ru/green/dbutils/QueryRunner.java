@@ -70,7 +70,7 @@ public class QueryRunner {
 		String password = DBAnalyzer.getPreference("connection.password");// Settings.getPassword();
 
 		if (password.isEmpty()) {
-			password = "dbrnjhbz";
+			password = ""; //FIX: throw Exception
 		}
 
 		boolean hasError = true;
