@@ -1,23 +1,16 @@
 # Multiple Database Queries
 
-MDQ позволяет сделать выборку данных из нескольких БД (одинаковой структуры) и выгрузить полученный результат в табличный редактор. MDQ написан на Java, поэтому для запуска понадобится JRE не ниже 1.6.x.
+MDQ allows you to make a data query from several databases of the same structure and upload the result to a table editor. MDQ is written in Java, so you will need a JRE of at least 1.6.x to run it.
 
-## Возможности
+## Features
 
-* сохранять запросы
-* работать с разными списками БД
-* использовать параметры в SQL-запросах
-* выгрузка в табличный редактор
-* история SQL-запросов Протестировано только с Firebird/Interbase СУБД.
+* storing a query in a bookmark
+* working with different DB lists
+* using parameters in SQL queries
+* export data to table editor
+* history of SQL queries Tested only with Firebird / Interbase DBMS.
 
-## Что появится в ближайшее время
-
-* История с сохранением форматирования.
-* Возможность подогнать столбцы по их ширине.
-* Встроенный редактор списка БД.
-* Незначительные улучшения и изменения.
-
-## Этот проект использует
+## This project uses
 
 * Apache POI
 * jaybird
